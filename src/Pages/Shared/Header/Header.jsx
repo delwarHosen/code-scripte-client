@@ -6,7 +6,7 @@ import { AuthContext } from '../../../Provider/AuthProvider';
 const Header = () => {
     const { user } = useContext(AuthContext)
     return (
-        <Navbar fluid={true} className="container mx-auto">
+        <Navbar fluid={true} className="">
             <Navbar.Container className="flex items-center justify-between">
                 <Navbar.Container className="flex items-center">
                     <Navbar.Brand>
