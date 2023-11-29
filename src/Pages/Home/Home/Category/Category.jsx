@@ -4,7 +4,7 @@ import CourseCart from '../../CourseCart/CourseCart';
 
 const Category = () => {
     const categories = useLoaderData()
-    console.log(categories);
+    // console.log(categories);
     return (
         <div>
             <h2>This is category</h2>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { FaArrowLeft, FaArrowRight, FaEye, FaHeart, FaRegStar, FaShoppingCart, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const CourseCart = ({ category }) => {
-    const { _id, title, image_url, details, price, total_view, duration, rating } = category
+    const {id} = useParams()
+    const { _id, title, image_url, details, price, total_view, duration, rating,technology } = category
     return (
         <div className="card w-4/5 bg-base-100 shadow-xl mb-4 container mx-auto">
             <figure><img src={image_url} className='rounded-lg p-2' style={{ width: "100%", height: "350px" }} alt="Shoes" /></figure>
@@ -36,7 +37,7 @@ const CourseCart = ({ category }) => {
                     </div>
                 </div>
                 <div className='flex justify-end'>
-                    <button className="btn btn-accent"><Link to={``}>See Details</Link><FaArrowRight /></button>
+                    <button className="btn btn-accent"><Link to={`/course/${_id}`}>See Details</Link><FaArrowRight /></button>
                 </div>
             </div>
         </div>

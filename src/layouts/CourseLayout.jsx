@@ -3,7 +3,7 @@ import Header from '../Pages/Shared/Header/Header';
 import { Outlet } from 'react-router-dom';
 import LeftSideNav from '../Pages/Shared/LeftSideNav/LeftSideNav';
 
-const Courses = () => {
+const CourseLayout = () => {
     return (
         <div>
             <Header></Header>
@@ -19,4 +19,4 @@ const Courses = () => {
     );
 };
 
-export default Courses;
+export default CourseLayout;
