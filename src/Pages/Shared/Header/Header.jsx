@@ -1,4 +1,3 @@
-import { Button, Navbar } from 'keep-react';
 import React, { useContext } from 'react';
 import logo from '../../../assets/logo-code-craft_876127-13.avif'
 import { AuthContext } from '../../../Provider/AuthProvider';
@@ -6,47 +5,39 @@ import { AuthContext } from '../../../Provider/AuthProvider';
 const Header = () => {
     const { user } = useContext(AuthContext)
     return (
-        <Navbar fluid={true} className="">
-            <Navbar.Container className="flex items-center justify-between">
-                <Navbar.Container className="flex items-center">
-                    <Navbar.Brand>
-                        <img style={{ height: "100px" }} src={logo} alt="" />
-                    </Navbar.Brand>
-                    <Navbar.Divider></Navbar.Divider>
-                    <Navbar.Container
-                        tag="ul"
-                        className="lg:flex hidden items-center justify-between gap-8" >
-                        <Navbar.Link className='text-2xl font-bold' to='/' linkName="Home" />
-                        <Navbar.Link to='/courses' linkName="Courses" />
-                        <Navbar.Link to='/faq' linkName="FAQ" />
-                        <Navbar.Link to='/blog' linkName="Blog" />
-                    </Navbar.Container>
-                    <Navbar.Collapse collapseType="sidebar">
-                        <Navbar.Container tag="ul" className="flex flex-col gap-5">
-                            <Navbar.Link linkName="Home" />
-                            <Navbar.Link linkName="Projects" />
-                            <Navbar.Link linkName="Blogs" />
-                            <Navbar.Link linkName="News" />
-                            <Navbar.Link linkName="Resources" />
-                        </Navbar.Container>
-                    </Navbar.Collapse>
-                </Navbar.Container>
-
-                <Navbar.Container className="flex gap-2">
-                    {
-                        user && <p>{user.displayName}</p>
-                    }
-                    {
-                        user ? <Button size="sm" type="primary">
-                            Logout
-                        </Button> : <Button size="sm" type="primary">
-                            Login
-                        </Button>
-                    }
-                    <Navbar.Toggle />
-                </Navbar.Container>
-            </Navbar.Container>
-        </Navbar>
+        <div className="navbar bg-base-100">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Item 1</a></li>
+                        <li>
+                            <a>Parent</a>
+                            <ul className="p-2">
+                                <li><a>Submenu 1</a></li>
+                                <li><a>Submenu 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                <a className="btn btn-ghost text-xl">daisyUI</a>
+            </div>
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-1">
+                    <li><a>Item 1</a></li>
+                    <li>
+                       <a href="">Item 2</a>
+                    </li>
+                    <li><a>Item 3</a></li>
+                </ul>
+            </div>
+            <div className="navbar-end">
+                <a className="btn">login</a>
+            </div>
+        </div>
     );
 };
 

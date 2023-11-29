@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBeer, FaCheck } from 'react-icons/fa';
+import { FaCheck } from 'react-icons/fa';
 
-const RightSiteNav = () => {
+const LefttSiteNav = () => {
     const [categories, setCategories] = useState([])
     useEffect(() => {
         fetch('http://localhost:5000/categories')
@@ -27,4 +27,4 @@ const RightSiteNav = () => {
     );
 };
 
-export default RightSiteNav;
+export default LefttSiteNav;
