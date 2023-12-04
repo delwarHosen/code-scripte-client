@@ -1,18 +1,19 @@
 import React from 'react';
 import Header from '../Pages/Shared/Header/Header';
 import { Outlet } from 'react-router-dom';
-import LeftSideNav from '../Pages/Shared/LeftSideNav/LeftSideNav';
+// import LeftSideNav from '../Pages/Shared/RightSiteNav/LeftSideNav';
+import RightSiteNav from '../Pages/Shared/RightSiteNav/RightSiteNav';
 
 const CourseLayout = () => {
     return (
         <div>
             <Header></Header>
-            <div className="grid grid-rows-3 grid-flow-col gap-4">
+            <div className="grid sm:grid-cols-3 gap-4">
                 <div className="col-span-2">
                     <Outlet></Outlet>
                 </div>
-                <div className="row-span-3">
-                    <LeftSideNav></LeftSideNav>
+                <div className="sm:w-full">
+                    <RightSiteNav></RightSiteNav>
                 </div>
             </div>
         </div>

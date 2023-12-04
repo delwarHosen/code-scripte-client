@@ -6,8 +6,10 @@ const Category = () => {
     const categories = useLoaderData()
     // console.log(categories);
     return (
-        <div>
-            <h2>This is category</h2>
+        <div className=''>
+           {
+            categories &&  <h2 className='text-2xl font-bold mt-3 font-sans text-center text-pink-500'>This category length: {categories.length}</h2>
+           }
             <div>
                 {
                     categories.map(category=> <CourseCart
