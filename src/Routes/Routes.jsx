@@ -10,12 +10,14 @@ import Login from "../Pages/Login/Login/Login";
 import Register from "../Pages/Login/Register/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import ShowError from "../Pages/Shared/ShowError/ShowError";
+import Contact from "../Pages/Courses/Dashboard/Contact/Contact";
+import Blog from "../Pages/Courses/Dashboard/Blog/Blog";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <LoginLayout></LoginLayout>,
-        errorElement:<ShowError></ShowError>,
+        errorElement: <ShowError></ShowError>,
         children: ([
             {
                 path: '/',
@@ -26,15 +28,15 @@ const router = createBrowserRouter([
                 element: <Login></Login>
             },
             {
-                path:'/register',
-                element:<Register></Register>
+                path: '/register',
+                element: <Register></Register>
             }
         ])
     },
     {
         path: 'category',
         element: <Main></Main>,
-        errorElement:<ShowError></ShowError>,
+        errorElement: <ShowError></ShowError>,
         children: ([
             {
                 path: ':id',
@@ -47,7 +49,7 @@ const router = createBrowserRouter([
     {
         path: "courses",
         element: <CourseLayout></CourseLayout>,
-        errorElement:<ShowError></ShowError>,
+        errorElement: <ShowError></ShowError>,
         children: ([
 
             {
@@ -59,10 +61,18 @@ const router = createBrowserRouter([
         ])
     },
     {
-        path: '/dashboard',
+        path: '/',
         element: <DashboardLayout></DashboardLayout>,
-        errorElement:<ShowError></ShowError>,
+        errorElement: <ShowError></ShowError>,
         children: ([
+            {
+                path: 'contact',
+                element: <Contact></Contact>
+            },
+            {
+                path:'blog',
+                element:<Blog></Blog>
+            },
             {
                 path: '/dashboard',
                 element: <Dashboard></Dashboard>

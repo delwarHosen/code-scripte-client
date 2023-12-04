@@ -13,7 +13,7 @@ const LeftSiteNav = () => {
     return (
         <div className='text-center sticky top-16'>
             <h2 className='text-xl font-bold mt-3 ml-7 bg-gradient-to-r from-blue-600 to-pink-500 inline-block text-transparent bg-clip-text font-sans'>All Category</h2>
-            <div className='ml-28 mt-5 max-w-md mx-auto bg-white shadow-md overflow-hidden sm:rounded-md'>
+            <div className='ml-20 mt-5 max-w-md mx-auto bg-white shadow-md overflow-hidden sm:rounded-md'>
                 <ul className='px-8'>
                     {
                         categories.map(category => <li

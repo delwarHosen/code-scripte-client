@@ -15,7 +15,7 @@ const Header = () => {
             })
     }
     return (
-        <div className="navbar bg-base-100 bg-gradient-to-r from-gray-100 to-gray-200 sticky top-0">
+        <div className="navbar bg-base-100 bg-gradient-to-r from-gray-100 to-gray-200 sticky top-0 z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,9 +24,9 @@ const Header = () => {
                     <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to='/category/0' className='text-lg font-semibold font-mono text-gray-600'>Courses</Link></li>
                         <li>
-                            <Link className='text-lg font-semibold font-mono text-gray-600'>Contact</Link>
+                            <Link to='/contact' className='text-lg font-semibold font-mono text-gray-600'>Contact</Link>
                         </li>
-                        <li><Link className='text-lg font-semibold font-mono text-gray-600'>Blog</Link></li>
+                        <li><Link to='/blog' className='text-lg font-semibold font-mono text-gray-600'>Blog</Link></li>
                     </ul>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-600 font-mono"><span className='text-4xl bg-gradient-to-r from-blue-600 to-pink-500 inline-block text-transparent bg-clip-text'>CODE</span> SCRIPT</h3>
@@ -35,9 +35,9 @@ const Header = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li><Link to='/category/0' className='text-xl font-semibold font-mono text-gray-600'>Courses</Link></li>
                     <li>
-                        <Link className='text-xl font-semibold font-mono text-gray-600'>Contact</Link>
+                        <Link to='/contact' className='text-xl font-semibold font-mono text-gray-600'>Contact</Link>
                     </li>
-                    <li><Link className='text-xl font-semibold font-mono text-gray-600'>Blog</Link></li>
+                    <li><Link to='/blog' className='text-xl font-semibold font-mono text-gray-600'>Blog</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
